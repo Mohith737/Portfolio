@@ -243,5 +243,84 @@ export const caseStudies: CaseStudy[] = [
         ]
       }
     ]
+  },
+  {
+    id: 'ecommerce-frontend',
+    title: 'Ecommerce Frontend Platform',
+    subtitle: 'Full-featured consumer shopping experience with atomic design system',
+    category: 'E-commerce  Consumer UX',
+    year: '2026',
+    duration: '4 weeks',
+    role: 'UI/UX Designer & Frontend Engineer',
+    tags: ['E-commerce', 'Design System', 'Atomic Design', 'Consumer UX', 'React 19'],
+    color: '#0d1117',
+    accent: '#F59E0B',
+    github: 'https://github.com/Mohith737/Ecommerce-Frontend-Platform',
+    designSystem: 'Custom Atomic Design System',
+    techStack: ['React 19', 'TypeScript', 'Tailwind CSS 4', 'Zustand', 'TanStack Query', 'Vite'],
+    overview: 'Designed and built a complete consumer ecommerce frontend from scratch covering 13 distinct screens across the full shopping journey from discovery to post-purchase tracking. Built an atomic design system with custom design tokens driving every UI decision consistently across the platform.',
+    sections: [
+      {
+        type: 'problem',
+        title: 'The Problem',
+        content: 'Most ecommerce frontends collapse under the weight of their own complexity. The challenge was designing a frontend handling the full shopping lifecycle without becoming a UX maze.',
+        items: [
+          'Users abandon carts due to confusing multi-step checkout flows with no progress visibility',
+          'Search experiences that show dead ends with no recovery paths — no trending, no recents, no empty state guidance',
+          'Product pages that fail to communicate stock urgency, variant availability, and comparison affordance clearly',
+          'No consistent loading, error, or empty states — every screen handles failure differently',
+          'Mobile and desktop experiences that diverge in behavior, not just layout'
+        ]
+      },
+      {
+        type: 'users',
+        title: 'Users & Journey',
+        content: 'Designed for three user states across the shopping journey — each with different information needs and trust levels:',
+        items: [
+          'Guest shoppers — exploring without commitment, need low-friction discovery and clear trust signals before sign-up',
+          'Authenticated users — returning shoppers with wishlist, order history, and saved addresses needing session continuity',
+          'Comparison-driven buyers — high-intent users evaluating up to 3 products side-by-side before committing'
+        ]
+      },
+      {
+        type: 'decisions',
+        title: 'Key Design Decisions',
+        content: 'Every decision was made to reduce friction at the highest drop-off points in a typical shopping flow:',
+        items: [
+          'Atomic Design System from scratch — atoms (Button, Input, Badge, StarRating), molecules (ProductCard, Modal, Toast, ErrorState, CardSkeleton) with custom CSS design tokens for color, spacing, typography, motion, radius, and shadows',
+          'Skeleton loaders on every screen — PageSkeleton and CardSkeleton mirror actual content shape rather than generic grey bars, reducing perceived load time',
+          '3-step checkout with Zustand persistence — CheckoutStepper guides Address  Payment  Review with state persisted so refreshing does not wipe progress',
+          'Search with full recovery design — RecentSearches, TrendingProducts, and NoResults components cover every search state, turning dead ends into re-engagement opportunities',
+          'Infinite scroll via IntersectionObserver on search results — skeleton cards appear before content arrives, eliminating pagination friction',
+          'Side-by-side CompareTable for up to 3 products — users add from PDP or PLP and navigate directly to any compared product',
+          'StockStatusBar on PDP communicates genuine urgency — In Stock / Low Stock / Out of Stock with quantity selector disabled when unavailable',
+          'CartDrawer available globally — users review and modify cart without leaving the current page'
+        ]
+      },
+      {
+        type: 'challenges',
+        title: 'Engineering Challenges',
+        content: 'The hardest problems were around state consistency across a complex multi-screen flow:',
+        items: [
+          'Mixed state architecture — React Query for server data, Zustand for UI state (cart, checkout, compare, search), Context for auth, localStorage for token persistence — each layer has a clear responsibility',
+          'Custom hash-based router with lazy-loaded pages, Suspense boundaries, and route-level ErrorBoundary catching failures independently',
+          'Guest mode with seamless upgrade to authenticated state — AuthProvider handles both with protected routes returning users to intended destination post-login',
+          'OpenAPI-generated SDK in src/api-sdk — all API calls typed end-to-end eliminating manual type maintenance',
+          'Responsive layout with desktop filter sidebar and mobile slide-in CategorySidebar drawer from the same component tree'
+        ]
+      },
+      {
+        type: 'outcome',
+        title: 'Outcomes & Learnings',
+        content: 'Building a full ecommerce frontend from scratch taught me that consumer UX lives or dies at transition points — search to product, product to cart, cart to checkout.',
+        items: [
+          '13 fully designed and implemented screens covering the complete shopping lifecycle',
+          'Custom atomic design system with design tokens driving color, spacing, typography, motion, and shadow consistently',
+          'Full empty, error, loading, and success states for every screen — zero unhandled UI states',
+          'Infinite scroll, skeleton loaders, cart drawer, multi-step checkout, and product comparison — all production-ready',
+          'Playwright E2E test suite covering critical user flows for regression safety'
+        ]
+      }
+    ]
   }
 ];
