@@ -78,7 +78,7 @@ const Home: React.FC = () => {
         <p className="hero-desc">
           I design interfaces where constraints <em>are</em> the design problem —
           healthcare systems, B2B procurement platforms, AI recruitment tools.
-          Currently at <strong>Think41, Bengaluru</strong>.
+          Previously at <strong>Think41, Bengaluru</strong> (Feb–Mar 2026).
         </p>
         <div className="hero-actions">
           <a
@@ -159,7 +159,7 @@ const Home: React.FC = () => {
           <div className="about-text">
             <p>
               I'm a Computer Science undergraduate at VIT Amaravati (2026),
-              currently interning as a Full Stack Engineer at <strong>Think41, Bengaluru</strong>.
+              previously a Full Stack Engineer Intern at <strong>Think41, Bengaluru</strong> (Feb–Mar 2026).
               My work lives at the intersection of design systems, interaction design,
               and frontend engineering.
             </p>
@@ -176,7 +176,7 @@ const Home: React.FC = () => {
           </div>
           <div className="about-stats">
             <div className="stat">
-              <div className="stat-num">3</div>
+              <div className="stat-num">4</div>
               <div className="stat-label">Production Projects</div>
             </div>
             <div className="stat">
